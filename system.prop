@@ -1,0 +1,65 @@
+#
+# system.prop for u8800pro
+#
+
+rild.libpath=/system/lib/libril-qc-1.so
+rild.libargs=-d /dev/smd0
+ro.telephony.default_network=0
+ro.telephony.ril_class=LGEQualcommRIL
+ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+#ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock
+
+# system props for the data modules and for telephony modules
+#
+ro.use_data_netmgrd=true
+ro.config.ehrpd=true
+
+#
+# system prop for sending power off request to RIL during phone shutdown
+#
+ro.ril.shutdown=true
+
+#
+ro.hdmi.enable=false
+lpa.decode=false
+
+#
+# system prop for opengles version
+#
+ro.opengles.version=131072
+
+debug.sf.hw=1
+debug.composition.type=mdp
+com.qc.hardware=true
+ro.sf.lcd_density=240
+
+#
+# system prop for multi rild (DSDS case)
+#
+ro.multi.rild=false
+
+#
+# system prop for using landscape preview layout in camera
+#
+debug.camera.landscape=true
+debug.camcorder.disablemeta=0
+
+#
+# system prop for Bluetooth
+#
+#ro.qualcomm.bluetooth.ftp=true
+#ro.bluetooth.request.master=true
+#ro.bluetooth.remote.autoconnect=true
+#ro.qualcomm.bluetooth.dun=true
+
+#
+# system prop for internal and external SD and SD card emulation of emmc partition
+#
+ro.additionalmounts=/mnt/emmc
+ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
+ro.emmc.sdcard.partition=14
+
+ro.confg.hw_appsbootversion=U8800PROVCM9_APPSBOOT
+ro.confg.hw_appversion=U8800PROVCM9_KERNEL
+ro.confg.hw_appfsversion=U8800PROVCM9_SYSIMG
